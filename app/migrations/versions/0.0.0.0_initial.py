@@ -41,8 +41,8 @@ def upgrade() -> None:
     op.execute(
         """
         INSERT INTO todo (id, title, description) VALUES
-        ('4', 'HeaderText', 'description of HeaderText'),
-        ('5', 'FooterText', 'description of FooterText')
+        ('1', 'HeaderText', 'description of HeaderText'),
+        ('2', 'FooterText', 'description of FooterText')
         """
     )    
 
