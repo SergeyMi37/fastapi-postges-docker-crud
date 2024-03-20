@@ -31,7 +31,7 @@ def upgrade() -> None:
     )
     op.create_index(op.f('ix_todo_id'), 'todo', ['id'], unique=False)
     op.create_index(op.f('ix_todo_title'), 'todo', ['title'], unique=False)
-        op.execute(
+    op.execute(
         """
         INSERT INTO tasks (id, task) VALUES
         ('1', 'DarkThemeDflt'),
@@ -41,8 +41,8 @@ def upgrade() -> None:
     op.execute(
         """
         INSERT INTO todo (id, title, description) VALUES
-        ('1', 'HeaderText', 'description of HeaderText'),
-        ('2', 'FooterText', 'description of FooterText')
+        ('3', 'HeaderText', 'description of HeaderText'),
+        ('4', 'FooterText', 'description of FooterText')
         """
     )    
 
