@@ -56,10 +56,20 @@ pip install -r requirements.txt
 
 ## Создать .env файл на основе env.sample
 
+# Генерим миграцию, не забыв перед этим указать правильное имя базы в настройках.
+# https://habr.com/ru/articles/585228/
+```
+alembic revision --autogenerate -m 'initial'
+```
 
 ## Запустить миграции
 ```bash
 alembic upgrade head
+```
+
+## Отменить все миграции
+```bash
+alembic downgrade base
 ```
 
 ## Необходимо перейти в каталог бэкенд:  
