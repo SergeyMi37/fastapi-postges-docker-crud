@@ -37,8 +37,7 @@ source env/bin/activate
 ## Копировать в файл .env переменную окружения DATABASE_URL из файла env.sample
 
 ## Установить СУБД PostgreSql
-создать базу данных testdemo программой pgAdmin
-или из терминала
+создать базу данных testdemo программой pgAdmin или из терминала
 ```bash
 sudo -u postgres psql
 postgres-# CREATE DATABASE testdemo;
@@ -129,7 +128,7 @@ docker rmi $(docker images -a -q) && docker system prune -f
 
 ## Клонировать ранее созданную ветку из репо
 ```
-git clone https://git.lab.nexus/ctz/lab/rating/inspection.git -b msw-dockerize
+git clone https://github.com/SergeyMi37/fastapi-postges-docker-crud.git -b msw-new-branch
 ```
 
 ## Основные команды сохранения изменений
