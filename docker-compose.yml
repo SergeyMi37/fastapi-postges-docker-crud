@@ -37,16 +37,3 @@ services:
     depends_on:
       db:
         condition: service_healthy
-  frontend:
-    build: .
-    ports:
-      - 3000:8000
-    environment:
-      - DATABASE_URL=postgresql+psycopg2://postgres:postgres@db:5432/testdemo
-    volumes:
-      - ./:/usr/src/app
-    command:
-      - --reload
-    depends_on:
-      db:
-        condition: service_healthy

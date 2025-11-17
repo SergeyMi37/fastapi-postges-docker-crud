@@ -1,5 +1,4 @@
 from fastapi import FastAPI, Depends, status, HTTPException
-from fastapi.staticfiles import StaticFiles
 from .db import init_db, get_session
 from . import crud, schemas
 # https://github.com/ben519/todooo/blob/master/main.py
@@ -32,9 +31,6 @@ app = FastAPI(
     openapi_url="/api/v0/openapi.json",
     openapi_tags=tags_metadata
 )
-
-# Mount static files
-app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 
 
 @app.on_event("startup")
